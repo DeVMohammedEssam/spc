@@ -1,0 +1,74 @@
+.header {
+  background-image: url("/images/homebackground.jpg");
+  background-size: cover;
+  background-position: 200px auto;
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
+  z-index: 1;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: $dark-blue;
+    z-index: -1;
+    opacity: 0.7;
+  }
+}
+
+.header__content-container {
+  height: 400px;
+  position: relative;
+  z-index: 100;
+}
+
+.header__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+
+}
+
+.header__title {
+  color: #FFF;
+}
+
+.header__text {
+  color: #CCC;
+  margin: 10px auto 50px auto;
+}
+
+.header__btn--explore {
+  width: 100px;
+  position: relative;
+  z-index: 100;
+
+}
+
+.spc-logo-container {
+  display: flex;
+  margin-top: -251px;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.spc-logo {
+  flex-grow: 1;
+  width: 500px;
+  height: 500px;
+
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Arial Tahoma;
+}

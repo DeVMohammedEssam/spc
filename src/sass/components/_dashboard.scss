@@ -1,0 +1,241 @@
+%box {
+  border-radius: 10px;
+  box-shadow: 0 0 3px #333;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+}
+
+.dashboard {
+  background: #444;
+  overflow: auto;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+.dashboard__navbar {
+  background: $dark-blue;
+  margin-bottom: 20px;
+}
+
+.dashboard__boxs-container {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 33;
+  margin: auto;
+  font-size: 20px;
+
+
+}
+
+.dashboard__text-box {
+  @extend %box;
+  background: $light-blue;
+  z-index: 2;
+  left: 80px;
+  top: 0px;
+  color: #fff;
+  text-align: left;
+  transform: scale(0);
+}
+
+.dashboard__text-box::before {
+  content: "\f0d9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  font-size: 50px;
+  top: 0;
+  left: -17px;
+  color: $light-blue;
+}
+
+.dashboard__code-box {
+  @extend %box;
+  background: $yellow;
+  z-index: 1;
+  top: 172px;
+  left: 137px;
+}
+
+.dashboard__code-box::before {
+  content: "\f0d8";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  font-size: 50px;
+  top: 0;
+  top: -45px;
+  left: 12px;
+  color: $yellow;
+}
+
+.mic-container {
+  margin: auto;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+}
+
+.dashboard__mic-button {
+  position: absolute;
+  top: 67px;
+  z-index: 3;
+  color: #333;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #aaa;
+}
+
+.dashboard__mic-button:active,
+.dashboard__mic-button:focus {
+  outline: none;
+  color: $google-plus-color;
+  transition: 0.4s ease;
+
+  & .dashboard__text-box {
+    animation: poping 1s ease-in-out 0s 1 normal forwards;
+  }
+}
+
+.dashboard__mic-button {
+  padding: 20px;
+  display: block;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: relative;
+
+  span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 4px 0 0 0;
+    border-style: solid;
+    position: absolute;
+    opacity: 0;
+  }
+
+  //
+  span.three {
+    top: 8px;
+    left: 20px;
+    border-color: #777;
+  }
+
+  span.two {
+    top: -4px;
+    left: 17px;
+    width: 45px;
+    height: 45px;
+    border-color: #999;
+  }
+
+  span.one {
+    width: 50px;
+    height: 50px;
+    top: -16px;
+    left: 14px;
+    border-color: #aaa;
+  }
+}
+
+//
+
+.dashboard__mic-button:hover {
+  & span.three {
+    transition: opacity 0.4s linear;
+    transition-delay: 0s;
+    opacity: 1;
+  }
+
+  & span.two {
+    transition: opacity 0.4s linear;
+    transition-delay: 0.4s;
+    opacity: 1;
+  }
+
+  & span.one {
+    transition: opacity 0.4s linear;
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+}
+
+.browser-head {
+  display: block;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  width: 100%;
+  width: calc(100% - 2px);
+  height: 31px;
+  background: #dedede;
+  border-radius: 5px 5px 0 0;
+  border: solid #ccc;
+  border-width: 1px 1px 0;
+
+}
+
+.browser-view {
+  width: 70%;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin: auto;
+  position: relative;
+
+  @media screen and (max-width: 1000px) {
+    width: 95%;
+  }
+}
+
+
+
+.browser-view__inner {
+  width: 100%;
+  height: 600px;
+  background-image: url("browser_img.svg");
+  background-size: cover;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  position: relative;
+
+}
+
+.browser-view__user-output {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 125px;
+  background: #fff;
+}
+
+@keyframes poping {
+  0% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

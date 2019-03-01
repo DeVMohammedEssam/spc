@@ -1,0 +1,135 @@
+footer {
+    background: $dark-grey;
+    color: #FFF;
+    padding: 100px 0 50px 0;
+}
+
+.footer__links-list {
+    li::before {
+        content: "->";
+        display: "inline-block";
+        color: $yellow;
+        margin-right: 10px;
+    }
+
+    a {
+        color: #FFF;
+    }
+
+
+}
+
+.footer__links-list__title {
+    color: $yellow;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.footer__links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__info-box__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.footer__info-box {
+    background: $off-white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    color: #000;
+    align-items: center;
+
+
+    .footer__info-box__text {
+        margin: auto;
+    }
+
+    .footer__info-box__icon {
+        margin-right: 10px;
+    }
+}
+
+.footer__info-box:first-of-type {
+    margin-bottom: 20px;
+}
+
+.footer__social-icon {
+    width: 25px;
+    height: 25px;
+    transform: rotate(-45deg);
+
+}
+
+.footer__social-box__container {
+    display: flex;
+
+
+}
+
+.footer__social-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    transform: rotate(45deg);
+    background: #AAA;
+    justify-content: center;
+    align-items: center;
+    margin: 0 $margin-sm;
+    transition: 0.4s ease;
+
+    &:hover {
+        transition: 0.4s ease;
+    }
+}
+
+.footer__social-box:nth-of-type(1) {
+    margin-top: -20px;
+
+    &:hover {
+        background: $facebook-color;
+        margin-top: -15px
+    }
+}
+
+.footer__social-box:nth-of-type(2) {
+    margin-top: 10px;
+
+    &:hover {
+        background: $twitter-color;
+        margin-top: 5px
+    }
+}
+
+.footer__social-box:nth-of-type(3) {
+    margin-top: -20px;
+
+    &:hover {
+        background: $linkedin-color;
+        margin-top: -15px
+    }
+}
+
+.footer__social-box:nth-of-type(4) {
+    margin-top: 10px;
+
+    &:hover {
+        background: $google-plus-color;
+        margin-top: 5px
+    }
+}
+
+.footer__copy-right {
+    color: #DDD;
+}

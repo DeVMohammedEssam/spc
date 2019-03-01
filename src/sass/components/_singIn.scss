@@ -1,0 +1,45 @@
+.signIn__container {
+    background: $dark-blue;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+}
+
+.signIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.signIn__form {
+    width: 400px;
+    background: $off-white;
+    border-radius: 15px;
+    padding: 50px 30px;
+    margin-top: -70px;
+    box-shadow: 0 0 4px $off-white;
+}
+
+.signIn__btns-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-to-home {
+    position: absolute;
+    color: $off-white;
+    top: 50px;
+    left: 50px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.back-to-home:hover {
+    color: $off-white;
+    opacity: 1;
+    text-decoration: none
+}

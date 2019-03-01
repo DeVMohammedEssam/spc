@@ -1,0 +1,46 @@
+.container {
+  max-width: 90% !important;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sections-devider {
+  margin: $sections-margin*3 0;
+}
+
+//bootstrap override
+//carousel indicatiors changing to circle
+.carousel-indicators li {
+  max-width: 20px;
+  max-height: 20px;
+  background: #ddd;
+}
+
+.carousel-indicators li.active {
+  box-shadow: 0 0 5px #333;
+
+  animation: upDown 0.4s ease 0s infinite alternate both;
+}
+
+.carousel-indicators {
+  bottom: -66px;
+}
+
+.carousel-inner {
+  padding: 10px;
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-14px);
+  }
+}

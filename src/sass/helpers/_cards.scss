@@ -1,0 +1,148 @@
+.custom-card {
+    background: $off-white;
+    overflow: hidden;
+    display: flex;
+
+    @media screen and (max-width: 762px) {
+
+
+        margin: auto;
+    }
+
+
+
+}
+
+.card-simple {
+    height: $length-sm;
+    border-radius: 5px;
+    padding: $padding-sm;
+
+    &:hover .card__img {
+        transform: scale(1.2);
+        transition: 1s ease-in-out;
+    }
+
+    .card__img-container {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card__img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: 1s ease-in-out;
+    }
+
+}
+
+.carousel__card--left {
+    @extend .card-simple;
+
+    @media screen and (min-width: 762px) {
+        width: $length-sm;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: $length-md;
+    }
+
+    height: $length-md;
+    transition: 0.2s ease;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &:hover .card__img {
+        transform: scale(1);
+    }
+
+    &:hover {
+        box-shadow: 0 0 10px rgba($dark-blue, 0.5);
+        transition: 0.2s ease;
+    }
+
+    .card__img-container {
+        padding: $padding-lg;
+        max-height: 75%;
+
+    }
+
+    .btns-container {
+        display: flex;
+        justify-content: center;
+        margin-top: $margin-sm;
+    }
+
+    .card__btn--explore {
+        flex-grow: 1;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.carousel__card--right {
+    height: 170px;
+
+    @media screen and (max-width: 762px) {
+        height: 200px;
+    }
+
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: row;
+    transition: 0.2s ease;
+    align-items: center;
+    justify-content: center;
+
+
+    &:hover {
+        box-shadow: 0 0 10px rgba($dark-blue, 0.5);
+        transition: 0.2s ease;
+    }
+
+    .card__text {
+        padding: 5px;
+
+    }
+
+    .card__img-container {
+        display: flex;
+        flex-direction: column;
+        border-radius: inherit;
+
+        img {
+            object-fit: cover;
+            height: 100px;
+            width: 100px;
+            border-radius: inherit;
+        }
+
+        img:nth-of-type(1) {
+            margin-right: 20px;
+        }
+
+    }
+}
+
+.card__btn--explore {
+    background: $dark-blue;
+    color: #FFF;
+}
+
+.card__btn--fav {
+    background: transparent;
+    color: #DDD;
+    box-shadow: none;
+    border: 2px solid #DDD;
+}
+
+.card__btn--fav:focus {
+    color: $yellow;
+    border-color: transparent;
+    border-color: $yellow;
+    box-shadow: 0 0 10px $yellow;
+}
